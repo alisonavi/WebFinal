@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.querySelectorAll('a[href^="#"').forEach(link => {
 
-    link.addEventListener('click', function(e) {
+    link.addEventListener('click', function (e) {
         e.preventDefault();
 
         let href = this.getAttribute('href').substring(1);
@@ -50,7 +50,7 @@ document.querySelectorAll('a[href^="#"').forEach(link => {
         const scrollTarget = document.getElementById(href);
 
         const topOffset = document.querySelector('.scrollto').offsetHeight;
-        
+
         const elementPosition = scrollTarget.getBoundingClientRect().top;
         const offsetPosition = elementPosition - topOffset;
 
@@ -67,14 +67,14 @@ const navToggleBtn = document.querySelector("[data-nav-toggle-btn]");
 const navbarLinks = document.querySelectorAll("[data-nav-link]");
 
 const navToggleFunc = function () {
-  navToggleBtn.classList.toggle("active");
-  navbar.classList.toggle("active");
-  overlay.classList.toggle("active");
+    navToggleBtn.classList.toggle("active");
+    navbar.classList.toggle("active");
+    overlay.classList.toggle("active");
 }
 
 navToggleBtn.addEventListener("click", navToggleFunc);
 overlay.addEventListener("click", navToggleFunc);
 
 for (let i = 0; i < navbarLinks.length; i++) {
-  navbarLinks[i].addEventListener("click", navToggleFunc);
-}
+    navbarLinks[i].addEventListener("click", navToggleFunc);
+} x
